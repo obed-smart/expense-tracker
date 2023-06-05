@@ -1,1 +1,30 @@
-world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="track-main">
+    <h1>EXPENSE TRACKER</h1>
+    <div class="track-iput">
+        <input type="datetime-local" class="track-input-1" >
+        <select name="Expense" id="track-select" >
+          <option disabled selected value="">selecExpense</option>
+            <option value="feed" >feed</option>
+            <option value="food">food</option>
+            <option value="cloth">cloth</option>
+            <option value="fuel">fuel</option>
+            <option value="gas">gas</option>
+        </select>
+        <input type="number" name="$" class="track-input-3" placeholder="Amount">
+        <input type="text" placeholder="description" class="track-input-4">
+        <button track-btn>add expense</button>
+    </div>
+    </div>
+</body>
+</html>
