@@ -9,25 +9,35 @@
 </head>
 <body>
 <div class="container">
-    <div class="track-main">
+    <form class="track-main">
     <h1>EXPENSE TRACKER</h1>
     <div class="track-iput">
-        <input type="datetime-local" class="track-input-1" >
-        <select name="Expense" id="track-select" >
-          <option disabled selected value="">select expense</option>
+        <input type="datetime-local" class="track-input-1" id="input-date" required >
+        <select name="Expense" id="track-select" required id="input-select">
+          <option disabled selected value="">Expense Type</option>
             <option value="feed" >feed</option>
             <option value="food">food</option>
             <option value="cloth">cloth</option>
             <option value="fuel">fuel</option>
             <option value="gas">gas</option>
         </select>
-        <input type="number" name="$" class="track-input-3" placeholder="Amount">
-        <input type="text" placeholder="description" class="track-input-4">
+        <input type="number" min="1" class="track-input-3" id="input-number" placeholder="Amount" required>
+        <input type="text" placeholder="description" class="track-input-4" id="input-descrip" required>
      
     </div>
-    <span class="move-btn"><button class="track-btn" id="track-btn">add expense</button></span>
+  <button class="track-btn" id="track-btn">add expense</button>
+    </form>
+    <div class="table-main">
+      <table  class="tacker-table">
+        <tr>
+          <th class="">Date</th>
+          <th>Expense Type</th>
+          <th>Amount</th>
+          <th>description</th>
+        </tr>
+      </table>
     </div>
-    <ul></ul>
   </div>
+  <script src="app.js"></script>
 </body>
 </html>
