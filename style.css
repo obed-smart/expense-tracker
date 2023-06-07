@@ -4,27 +4,32 @@
     box-sizing: border-box;
     font-family: arial, sans-serif;
 }
-body{
-    background-color: rgb(158, 152, 140);
-}
 .container{
-    
-    margin: auto;
-   
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(132deg,rgb(141, 133, 139),#7b8385);
+    position: absolute;
 }
+   
+   
+
 .track-main{
-    background-color: rgb(160, 137, 137);
-    width: 70%;
+    background-color:rgb(159, 154, 144) ;
+    width: 90%;
     height: vh;
     margin: auto;
     padding: 10px;
-    margin-top: 20px;
-    border-radius: 0 0 50px 50px;
+    border-radius: 20px;
+  margin-top: 20px;
+  position: relative;
+  user-select: none;
+  box-shadow: 4px 4px 4px blueviolet;
 }
 .container h1{
     margin-bottom:10px ;
     text-align: center;
     color:#fff;
+    user-select: none;
 }
 .track-iput{
     height: 25vh;
@@ -44,7 +49,7 @@ input, select{
 border: none;
 outline: none;
 background: rgb(235, 231, 231);
-height: 60px;
+height: 50px;
 border-radius: 20px;
 }
 .track-btn{
@@ -57,7 +62,7 @@ border-radius: 20px;
   border: none;
 }
 .table-main{
-     width: 80%;
+     width: 90%;
     height: 30vh;
     margin: auto;
    display: flex;
