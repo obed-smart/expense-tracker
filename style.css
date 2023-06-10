@@ -23,7 +23,7 @@
   margin-top: 20px;
   position: relative;
   user-select: none;
-  box-shadow: 4px 4px 4px blueviolet;
+  
 }
 .container h1{
     margin-bottom:10px ;
@@ -61,23 +61,15 @@ border-radius: 20px;
   color: #fff;
   border: none;
 }
-.table-main{
-     width: 90%;
-    height: 30vh;
-    margin: auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   user-select: none;
-}
 .tacker-table{
-    width: inherit;
+    width:90%;
+    margin: auto;
+    margin-top: 30px;
 }
-td, th{
+th{
     border-collapse: collapse;
     background-color: blueviolet;
     padding:8px ;
     color: #fff;
     border-radius: 5px;
-    
 }
