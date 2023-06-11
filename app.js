@@ -28,9 +28,7 @@ console.log(tableCell1)
 
 })
 
-if(tableCell1 === "" ){
-    tableCell1.style.background="red"
-}
+
 
 // const addtracker = ()=>{
   
