@@ -62,7 +62,7 @@ border-radius: 20px;
   border: none;
 }
 .tacker-table{
-    min-width: ;width:90%;
+    width:90%;
     margin: auto;
     user-select: none;
     
@@ -78,7 +78,7 @@ span{
     cursor: pointer;
 }
 td{
-    background-color: ;
+    background-color:coral ;
     text-align: center;
     color: #fff;
   margin-top: 50px;
