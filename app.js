@@ -6,9 +6,6 @@ const trackerButton = document.getElementById("track-btn");
 const myTable = document.getElementById("tacker-table");
 const tablebody = myTable.getElementsByTagName("tbody")[0];
 
-
-    
-
 trackerButton.addEventListener("click",()=>{
 
    const datevalue = inputdate.value;
@@ -16,24 +13,23 @@ trackerButton.addEventListener("click",()=>{
     const numbervalue =  inputnumber.value;
    const descripvalue = inputdescrip.value;
 
-   if(datevalue || selectvalue || numbervalue || descripvalue !=="" ){
+   if(datevalue || selectvalue || numbervalue || descripvalue !== "" ){
     createTd();
    }
 
 })
 document.body.addEventListener("keypress", (e)=>{
     if(e.key === "H"){
-        trackerButton.style.display = "none";
+        document.getElementById("track-main").style.display = "none";
     }else if(e.key === "S"){
-        trackerButton.style.display = "block";
+        document.getElementById("track-main").style.display = "block";
     }else if (e.key === "A" ){
 
     }
 })
-
 let createTd = ()=>{
 let newRow = myTable.insertRow();
-    newRow.className = "list";
+     newRow.style.margin = "20px";
     let tableCell1 = newRow.insertCell();
     let tableCell2 = newRow.insertCell();
     let tableCell3 = newRow.insertCell();
@@ -43,6 +39,7 @@ tableCell1.innerHTML = inputdate.value;
 tableCell2.innerHTML = inputselect.value;
 tableCell3.innerHTML = inputnumber.value;
 tableCell4.innerHTML = inputdescrip.value;
+
 
 
 inputdate.value = ""; 
@@ -55,6 +52,6 @@ let deletebutton = document.createElement("span");
     tableCell4.appendChild(deletebutton);
     deletebutton.addEventListener("click",(e)=>{
         if(e.target.tagName === "SPAN")
-    e.target.tablebody.remove();
+    e.target.parentElement.parentElement.remove();
         })
 }

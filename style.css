@@ -61,30 +61,33 @@ border-radius: 20px;
   color: #fff;
   border: none;
 }
-.tacker-table{
-    width:90%;
+.tacker-table {
+    width: 90%;
     margin: auto;
     user-select: none;
-    
+    margin-top: 40px;
 }
-th{
- 
+
+th, td {
+    padding: 6px;
+    margin-top: 50px;
+}
+
+th {
     background-color: blueviolet;
-    padding:8px ;
     color: #fff;
-    border-radius: 5px;
+    margin-bottom: 30px;
 }
 span{
     cursor: pointer;
+    border: 3px solid;
+    padding: 5px;
+    margin-right: -60px;
+    align-items: end;
 }
 td{
-    background-color:coral ;
+    background-color:rgb(238, 168, 145) ;
     text-align: center;
     color: #fff;
-  margin-top: 90px;
-   
-}
-.list{
-    background:brown ;
-     width:inherit ;
+    margin-top: 20px;
 }
