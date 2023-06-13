@@ -24,17 +24,17 @@ inputdate.value = "";
 inputselect.value = ""; 
 inputnumber.value = ""; 
 inputdescrip.value = ""; 
-console.log(tableCell1)
+
+
+let removeRow = document.createElement("SPAN");
+removeRow.innerHTML = "✖"
+removeRow.style.cursor = "pointer"
+tableRow.appendChild(removeRow)
 
 })
 
-if(tableCell1 === "" ){
-    tableCell1.style.background="red"
+.addEventListener("click",(e)=>{
+if(e.target.tagName === "SPAN"){
+    e.target.perentElement.remove();
 }
-
-// const addtracker = ()=>{
-  
-
-// alert(myTable)
-    
-// }
+})
