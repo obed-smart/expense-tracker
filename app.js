@@ -26,10 +26,10 @@ inputnumber.value = "";
 inputdescrip.value = ""; 
 
 
-let removeRow = document.createElement("SPAN");
+let deleteRow = document.createElement("SPAN");
 removeRow.innerHTML = "✖"
 removeRow.style.cursor = "pointer"
-tableRow.appendChild(removeRow)
+tableCell4.appendChild(deleteRow)
 
 })
 
