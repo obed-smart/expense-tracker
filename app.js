@@ -71,9 +71,4 @@ if(tableCell1 === "" ){
     tableCell1.style.background="red"
 }
 
-// const addtracker = ()=>{
-  
-
-// alert(myTable)
-    
-// }
+}
