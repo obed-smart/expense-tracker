@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="track-main">
+    <div class="track-main" id="track-main">
     <h1>EXPENSE TRACKER</h1>
     <div class="track-iput">
         <input type="date" class="track-input-1" id="input-date"  >
@@ -24,19 +24,20 @@
         <input type="number" min="1" class="track-input-3" id="input-number" placeholder="Amount" >
         <input type="text" placeholder="description" class="track-input-4" id="input-descrip" >
     </div>
-  <button class="track-btn" id="track-btn">add expense</button>
+  <button class="track-btn" id="track-btn">Add expense</button>
   </div>
-    <div class="table-main">
+  <div class="table-container">
       <table  class="tacker-table" id="tacker-table">
         <thead>
         <tr>
-          <th class="">Date</th>
+          <th>Date</th>
           <th>Expense Type</th>
           <th>Amount</th>
-          <th>description</th>
-        </tr>
+          <th>Description</th>
+          <th>Action</th>
+        </tr> 
       </thead>
-      <tbody>
+      <tbody class="tablebody">
         
       </tbody>
       </table>
