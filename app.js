@@ -1,3 +1,4 @@
+const inputDiv =  document.getElementById("track-main");
 const inputdate = document.getElementById("input-date");
 const inputselect = document.getElementById("input-select");
 const inputnumber = document.getElementById("input-number");
@@ -20,38 +21,49 @@ trackerButton.addEventListener("click",()=>{
 })
 document.body.addEventListener("keypress", (e)=>{
     if(e.key === "H"){
-        document.getElementById("track-main").style.display = "none";
+        inputDiv.style.display = "none";
     }else if(e.key === "S"){
-        document.getElementById("track-main").style.display = "block";
-    }else if (e.key === "A" ){
-
+        inputDiv.style.display = "block";
     }
 })
-let createTd = ()=>{
-let newRow = myTable.insertRow();
-     newRow.style.margin = "20px";
+
+let createTd = ()=> {
+    let newRow = tablebody.insertRow();
     let tableCell1 = newRow.insertCell();
     let tableCell2 = newRow.insertCell();
     let tableCell3 = newRow.insertCell();
     let tableCell4 = newRow.insertCell();
+    let tableCell5 = newRow.insertCell();
 
 tableCell1.innerHTML = inputdate.value;
 tableCell2.innerHTML = inputselect.value;
 tableCell3.innerHTML = inputnumber.value;
 tableCell4.innerHTML = inputdescrip.value;
 
+// inputdate.value = ""; 
+// inputselect.value = ""; 
+// inputnumber.value = ""; 
+// inputdescrip.value = ""; 
 
-
-inputdate.value = ""; 
-inputselect.value = ""; 
-inputnumber.value = ""; 
-inputdescrip.value = ""; 
-
-let deletebutton = document.createElement("span");
+let deletebutton = document.createElement("button");
     deletebutton.innerHTML ="✖"
-    tableCell4.appendChild(deletebutton);
-    deletebutton.addEventListener("click",(e)=>{
-        if(e.target.tagName === "SPAN")
-    e.target.parentElement.parentElement.remove();
-        })
+    deletebutton.className = "btn"
+    tableCell5.appendChild(deletebutton);
+let edit = document.createElement("span");
+edit.innerText = "✍"
+tableCell5.appendChild(edit)
+if(inputDiv.style.display === "none"){
+    tableCell5.style.display = "block";
+}
+tableCell5.addEventListener("click", (e) => {
+    if(e.target.tagName === "BUTTON"){
+        e.target.parentElement.parentElement.remove();
+    }else if(e.target.tagName === "SPAN"){
+tableCell1.contentEditable = "true"
+tableCell2.contentEditable = "true"
+tableCell3.contentEditable = "true"
+tableCell4.contentEditable = "true"
+    }
+})
+
 }
