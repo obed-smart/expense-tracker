@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: arial, sans-serif;
 }
-
+ /* THIS IS THE BODY CONTAINER OF THE PROJECT */
 .container {
     width: 100%;
     height: 100vh;
@@ -14,7 +14,7 @@
 }
 
 
-
+/* FOR THE MOTHER CONTAINER OF THE INPUTS AREA AND THE ADD BUTTON  */
 .track-main {
     background-color: rgb(159, 154, 144);
     width: 90%;
@@ -26,14 +26,14 @@
     user-select: none;
 
 }
-
+/* FOR THE HEADER OF THE PROJECT */
 .container h1 {
     margin-bottom: 10px;
     text-align: center;
     color: #fff;
     user-select: none;
 }
-
+/* THIS IS THE CONTAINER THAT CONTAIN THE INPUT AND THEIR STYLE  */
 .track-iput {
     height: 25vh;
     text-align: center;
@@ -41,7 +41,7 @@
     grid-template-columns: repeat(2, auto);
     gap: 12px;
 }
-
+/* THIS IS FOR THE PLACEHOLDER OF THE INPUT VALUE */
 ::placeholder,
 select,
 input {
@@ -51,7 +51,7 @@ input {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-
+/* THIS IS THE STYLE OF THE ALL THE INPUT AREA'S */
 input,
 select {
     border: none;
@@ -60,7 +60,7 @@ select {
     height: 50px;
     border-radius: 20px;
 }
-
+/* THE IS FOR THE ADD BUTTON  */
 .track-btn {
     padding: 15px 20px;
     margin-left: 45%;
@@ -70,7 +70,7 @@ select {
     color: #fff;
     border: none;
 }
-
+/* THIS IS THE MOTHER CONTAINER OF THE TABLE  */
 .table-container {
     width: 95%;
     height: 45vh;
@@ -82,37 +82,68 @@ select {
     position: relative;
     top: 5%;
 }
-
+/* THIS THE table */
 table {
     width: inherit;
 }
-
+/* FOR THE TABLE ROW  */
 tr {
     margin-bottom: 5px;
 }
-
+/* FOR THE TABLE HEAD */
 th {
     position: sticky;
-    background: blueviolet;
+    background: #701ebd;
     text-align: center;
-    height: 60px;
+    height: 50px;
+    border-radius:10px;
     border: none;
     top: 0;
+    color: rgb(239, 237, 237);
 }
-
-span,
-.btn {
+.color{
+border: 3px solid navy;
+}
+/* THIS IS FOR THE DELETE BUTTON  */
+.actionbtn button{
     cursor: pointer;
-    margin: 8px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: rgb(239, 237, 237);
+    
 }
-
+/* THIS IS FOR THE CONTENTEDITABLE BUTTON  */
+.actionbtn span {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color:rgb(239, 237, 237);
+    
+}
+/* THIS IS THE MOTHER CONTAINER OF DELETE BUTTON AND THE CONTENTEDITABLE BUTTON  */
+.actionbtn{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+/* THIS IS FOR THE TABLE DATA */
 td {
-    background-color: rgb(238, 168, 145);
+    background-color: rgb(159, 154, 144);
     text-align: center;
-    color: #fff;
-    border-radius: 3px;
+    color: rgb(252, 249, 249);
+    border-radius: 10px;
     border: 1px solid #5d5656;
     cursor: pointer;
     font-family:sans-sarif,open-sans;
     font-size: 20px;
+    padding: 5PX;
+    margin: 5PX;
+    max-width: 40px;
+    overflow: auto;
+}
+td:nth-child(even){
+    background-color:#727070 ;
 }
