@@ -49,47 +49,32 @@ let createTd = () => {
     tableCell3.innerHTML = inputnumber.value;
     tableCell4.innerHTML = inputdescrip.value;
 
-// TO FORMAT THE CURRENCY TO BE ABLE TO SHOW SIGNS AND CURMER
- let currencyFormater = new Intl.NumberFormat('en-NG',{
-    style:'currency',
-    currency: 'NGN',
- })
- tableCell3.innerHTML = currencyFormater.format(inputnumber.value);
-
-    inputdate.value = ""; 
-    inputselect.value = ""; 
-    inputnumber.value = ""; 
-    inputdescrip.value = ""; 
+inputdate.value = ""; 
+inputselect.value = ""; 
+inputnumber.value = ""; 
+inputdescrip.value = ""; 
 
     let action = document.createElement("div");
     action.className = "actionbtn";
     let deletebutton = document.createElement("button");
     deletebutton.innerHTML = "✖"
     deletebutton.className = "btn"
-    let edit = document.createElement("span");
-    edit.innerText = "🖋 "
-    action.appendChild(deletebutton);
-    action.appendChild(edit);
-    tableCell5.appendChild(action);
-
-document.body.addEventListener("click", (e)=>{
-    if(e.key === "H"){
-        edit.style.display = "no";
+    tableCell5.appendChild(deletebutton);
+let edit = document.createElement("span");
+edit.innerText = "✍"
+tableCell5.appendChild(edit)
+if(inputDiv.style.display === "none"){
+    tableCell5.style.display = "block";
+}
+tableCell5.addEventListener("click", (e) => {
+    if(e.target.tagName === "BUTTON"){
+        e.target.parentElement.parentElement.remove();
+    }else if(e.target.tagName === "SPAN"){
+tableCell1.contentEditable = "true"
+tableCell2.contentEditable = "true"
+tableCell3.contentEditable = "true"
+tableCell4.contentEditable = "true"
     }
 })
-    tableCell5.addEventListener("click", (e) => {
-        if (e.target.tagName === "BUTTON") {
-            e.target.parentElement.parentElement.parentElement.remove();
-        } else if (e.target.tagName === "SPAN") {
-            tableCell1.contentEditable = "true"
-            tableCell2.contentEditable = "true"
-            tableCell3.contentEditable = "true"
-            tableCell4.contentEditable = "true"
-        }else {
-            tableCell1.contentEditable = "false";
-            tableCell2.contentEditable = "false";
-            tableCell3.contentEditable = "false";
-            tableCell4.contentEditable = "false";
-        }
-    })
+
 }
