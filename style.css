@@ -93,13 +93,16 @@ tr {
 /* FOR THE TABLE HEAD */
 th {
     position: sticky;
-    background: blueviolet;
+    background: #701ebd;
     text-align: center;
     height: 50px;
     border-radius:10px;
     border: none;
     top: 0;
     color: rgb(239, 237, 237);
+}
+.color{
+border: 3px solid navy;
 }
 /* THIS IS FOR THE DELETE BUTTON  */
 .actionbtn button{
@@ -116,7 +119,7 @@ th {
     background: transparent;
     border: none;
     font-size: 20px;
-    color: blue;
+    color:rgb(239, 237, 237);
     
 }
 /* THIS IS THE MOTHER CONTAINER OF DELETE BUTTON AND THE CONTENTEDITABLE BUTTON  */
@@ -125,17 +128,12 @@ th {
     display: flex;
     margin: auto;
     justify-content: space-between;
-    opacity: 0;
-}
-.actionbtn:hover{
-    opacity: 1;
 }
 /* THIS IS FOR THE TABLE DATA */
 td {
-    background-color: rgb(144, 131, 127);
+    background-color: rgb(159, 154, 144);
     text-align: center;
-    color: rgb(239, 237, 237);
-    height: 30px;
+    color: rgb(252, 249, 249);
     border-radius: 10px;
     border: 1px solid #5d5656;
     cursor: pointer;
@@ -143,5 +141,9 @@ td {
     font-size: 20px;
     padding: 5PX;
     margin: 5PX;
-    
+    max-width: 40px;
+    overflow: auto;
+}
+td:nth-child(even){
+    background-color:#727070 ;
 }

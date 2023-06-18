@@ -7,6 +7,7 @@ const trackerButton = document.getElementById("track-btn");
 const myTable = document.getElementById("tacker-table");
 const tablebody = myTable.getElementsByTagName("tbody")[0];
 
+
 trackerButton.addEventListener("click", () => {
 
     const datevalue = inputdate.value;
@@ -22,32 +23,43 @@ trackerButton.addEventListener("click", () => {
 document.body.addEventListener("keypress", (e) => {
     if (e.key === "H") {
         inputDiv.style.display = "none";
-        let tableCell5 = newRow.insertCell().style.opacity = 0;
-    
-        
+        let hideAction = document.getElementById("hide-action");
+        hideAction.style.display = "none";
+
     } else if (e.key === "S") {
+        let hideAction = document.getElementById("hide-action");
+        hideAction.style.display = "block";
         inputDiv.style.display = "block";
+       
     }
 })
 
+// TO CREATE A NEW TABLE ROW AND CELL WITH THE TABLE DATA APPEBDED TO IT 
 let createTd = () => {
     let newRow = tablebody.insertRow();
+    newRow.classList.toggle("color");
     let tableCell1 = newRow.insertCell();
     let tableCell2 = newRow.insertCell();
     let tableCell3 = newRow.insertCell();
     let tableCell4 = newRow.insertCell();
-    let tableCell5 = newRow.insertCell()
-    
+    let tableCell5 = newRow.insertCell();
 
     tableCell1.innerHTML = inputdate.value;
     tableCell2.innerHTML = inputselect.value;
     tableCell3.innerHTML = inputnumber.value;
     tableCell4.innerHTML = inputdescrip.value;
 
-    // inputdate.value = ""; 
-    // inputselect.value = ""; 
-    // inputnumber.value = ""; 
-    // inputdescrip.value = ""; 
+// TO FORMAT THE CURRENCY TO BE ABLE TO SHOW SIGNS AND CURMER
+ let currencyFormater = new Intl.NumberFormat('en-NG',{
+    style:'currency',
+    currency: 'NGN',
+ })
+ tableCell3.innerHTML = currencyFormater.format(inputnumber.value);
+
+    inputdate.value = ""; 
+    inputselect.value = ""; 
+    inputnumber.value = ""; 
+    inputdescrip.value = ""; 
 
     let action = document.createElement("div");
     action.className = "actionbtn";
@@ -80,5 +92,4 @@ document.body.addEventListener("click", (e)=>{
             tableCell4.contentEditable = "false";
         }
     })
-
 }

@@ -15,18 +15,19 @@
         <input type="date" class="track-input-1" id="input-date"  >
         <select name="Expense"  id="input-select">
           <option disabled selected value="">Expense Type</option>
-            <option value="feed" >feed</option>
-            <option value="food">food</option>
-            <option value="cloth">cloth</option>
-            <option value="fuel">fuel</option>
-            <option value="gas">gas</option>
+            <option value="feed" >Feed</option>
+            <option value="food">Food</option>
+            <option value="cloth">Cloth</option>
+            <option value="fuel">Fuel</option>
+            <option value="gas">Gas</option>
+            <option value="Poultry medication">Poultry medication</option>
         </select>
         <input type="number" min="1" class="track-input-3" id="input-number" placeholder="Amount" >
         <input type="text" placeholder="description" class="track-input-4" id="input-descrip" >
     </div>
   <button class="track-btn" id="track-btn">Add expense</button>
   </div>
-  <div class="table-container">
+  <div class="table-container" id="table-container">
       <table  class="tacker-table" id="tacker-table">
         <thead>
         <tr>
@@ -34,7 +35,7 @@
           <th>Expense Type</th>
           <th>Amount</th>
           <th>Description</th>
-          <th>Action</th>
+          <th id="hide-action">Action</th>
         </tr> 
       </thead>
       <tbody class="tablebody">
