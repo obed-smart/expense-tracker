@@ -59,22 +59,30 @@ inputdescrip.value = "";
     let deletebutton = document.createElement("button");
     deletebutton.innerHTML = "✖"
     deletebutton.className = "btn"
-    tableCell5.appendChild(deletebutton);
-let edit = document.createElement("span");
-edit.innerText = "✍"
-tableCell5.appendChild(edit)
-if(inputDiv.style.display === "none"){
-    tableCell5.style.display = "block";
-}
-tableCell5.addEventListener("click", (e) => {
-    if(e.target.tagName === "BUTTON"){
-        e.target.parentElement.parentElement.remove();
-    }else if(e.target.tagName === "SPAN"){
-tableCell1.contentEditable = "true"
-tableCell2.contentEditable = "true"
-tableCell3.contentEditable = "true"
-tableCell4.contentEditable = "true"
+    let edit = document.createElement("span");
+    edit.innerText = "🖋 "
+    action.appendChild(deletebutton);
+    action.appendChild(edit);
+    tableCell5.appendChild(action);
+
+document.body.addEventListener("click", (e)=>{
+    if(e.key === "H"){
+        edit.style.display = "no";
     }
 })
-
+    tableCell5.addEventListener("click", (e) => {
+        if (e.target.tagName === "BUTTON") {
+            e.target.parentElement.parentElement.parentElement.remove();
+        } else if (e.target.tagName === "SPAN") {
+            tableCell1.contentEditable = "true"
+            tableCell2.contentEditable = "true"
+            tableCell3.contentEditable = "true"
+            tableCell4.contentEditable = "true"
+        }else {
+            tableCell1.contentEditable = "false";
+            tableCell2.contentEditable = "false";
+            tableCell3.contentEditable = "false";
+            tableCell4.contentEditable = "false";
+        }
+    })
 }
