@@ -49,10 +49,17 @@ let createTd = () => {
     tableCell3.innerHTML = inputnumber.value;
     tableCell4.innerHTML = inputdescrip.value;
 
-inputdate.value = ""; 
-inputselect.value = ""; 
-inputnumber.value = ""; 
-inputdescrip.value = ""; 
+// TO FORMAT THE CURRENCY TO BE ABLE TO SHOW SIGNS AND CURMER
+ let currencyFormater = new Intl.NumberFormat('en-NG',{
+    style:'currency',
+    currency: 'NGN',
+ })
+ tableCell3.innerHTML = currencyFormater.format(inputnumber.value);
+
+    inputdate.value = ""; 
+    inputselect.value = ""; 
+    inputnumber.value = ""; 
+    inputdescrip.value = ""; 
 
     let action = document.createElement("div");
     action.className = "actionbtn";
@@ -61,10 +68,8 @@ inputdescrip.value = "";
     deletebutton.className = "btn"
     let edit = document.createElement("span");
     edit.innerText = "🖋 "
-    action.appendChild(deletebutton);
-    action.appendChild(edit);
+    action.append(deletebutton,edit);
     tableCell5.appendChild(action);
-
 document.body.addEventListener("click", (e)=>{
     if(e.key === "H"){
         edit.style.display = "no";
