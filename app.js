@@ -68,10 +68,8 @@ let createTd = () => {
     deletebutton.className = "btn"
     let edit = document.createElement("span");
     edit.innerText = "🖋 "
-    action.appendChild(deletebutton);
-    action.appendChild(edit);
+    action.append(deletebutton,edit);
     tableCell5.appendChild(action);
-
 document.body.addEventListener("click", (e)=>{
     if(e.key === "H"){
         edit.style.display = "no";
