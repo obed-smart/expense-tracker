@@ -20,19 +20,19 @@ trackerButton.addEventListener("click", () => {
     }
 
 })
-document.body.addEventListener("keypress", (e) => {
-    if (e.key === "H") {
-        inputDiv.style.display = "none";
-        let hideAction = document.getElementById("hide-action");
-        hideAction.style.display = "none";
+// document.body.addEventListener("keypress", (e) => {
+//     if (e.key === "H") {
+//         inputDiv.style.display = "none";
+//         let hideAction = document.getElementById("hide-action");
+//         hideAction.style.display = "none";
 
-    } else if (e.key === "S") {
-        let hideAction = document.getElementById("hide-action");
-        hideAction.style.display = "block";
-        inputDiv.style.display = "block";
+//     } else if (e.key === "S") {
+//         let hideAction = document.getElementById("hide-action");
+//         hideAction.style.display = "block";
+//         inputDiv.style.display = "block";
        
-    }
-})
+//     }
+// })
 
 // TO CREATE A NEW TABLE ROW AND CELL WITH THE TABLE DATA APPEBDED TO IT 
 let createTd = () => {
@@ -70,11 +70,8 @@ let createTd = () => {
     edit.innerText = "🖋 "
     action.append(deletebutton,edit);
     tableCell5.appendChild(action);
-document.body.addEventListener("click", (e)=>{
-    if(e.key === "H"){
-        edit.style.display = "no";
-    }
-})
+
+
     tableCell5.addEventListener("click", (e) => {
         if (e.target.tagName === "BUTTON") {
             e.target.parentElement.parentElement.parentElement.remove();
