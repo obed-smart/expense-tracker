@@ -7,7 +7,6 @@ const trackerButton = document.getElementById("track-btn");
 const myTable = document.getElementById("tacker-table");
 const tablebody = myTable.getElementsByTagName("tbody")[0];
 
-
 trackerButton.addEventListener("click", () => {
 
     const datevalue = inputdate.value;
@@ -20,19 +19,19 @@ trackerButton.addEventListener("click", () => {
     }
 
 })
-document.body.addEventListener("keypress", (e) => {
-    if (e.key === "H") {
-        inputDiv.style.display = "none";
-        let hideAction = document.getElementById("hide-action");
-        hideAction.style.display = "none";
+// document.body.addEventListener("keypress", (e) => {
+//     if (e.key === "H") {
+//         inputDiv.style.display = "none";
+//         let hideAction = document.getElementById("hide-action");
+//         hideAction.style.display = "none";
 
-    } else if (e.key === "S") {
-        let hideAction = document.getElementById("hide-action");
-        hideAction.style.display = "block";
-        inputDiv.style.display = "block";
+//     } else if (e.key === "S") {
+//         let hideAction = document.getElementById("hide-action");
+//         hideAction.style.display = "block";
+//         inputDiv.style.display = "block";
        
-    }
-})
+//     }
+// })
 
 // TO CREATE A NEW TABLE ROW AND CELL WITH THE TABLE DATA APPEBDED TO IT 
 let createTd = () => {
@@ -70,11 +69,7 @@ let createTd = () => {
     edit.innerText = "🖋 "
     action.append(deletebutton,edit);
     tableCell5.appendChild(action);
-document.body.addEventListener("click", (e)=>{
-    if(e.key === "H"){
-        edit.style.display = "no";
-    }
-})
+
     tableCell5.addEventListener("click", (e) => {
         if (e.target.tagName === "BUTTON") {
             e.target.parentElement.parentElement.parentElement.remove();
@@ -91,3 +86,21 @@ document.body.addEventListener("click", (e)=>{
         }
     })
 }
+const darkMood = document.getElementById("darkmood");
+const container = document.getElementById("container");
+
+darkMood.addEventListener("click",(e)=>{
+if(e.target.innerHTML === "Dark mood"){
+    container.style.background = "#121212";
+    darkMood.innerHTML = "light mood";
+    inputDiv.style.background = "transparent";
+    trackerButton.style.border = "1px solid rgb(236, 234, 232)";
+    trackerButton.style.background = "transparent";
+} else if(e.target.innerHTML === "light mood"){
+    container.style.background = "linear-gradient(132deg, rgb(141, 133, 139), #7b8385)";
+     darkMood.innerHTML = "Dark mood";
+    inputDiv.style.background = "rgb(159, 154, 144)";
+    trackerButton.style.background = "blueviolet";
+    trackerButton.style.border = "none";
+}
+})
