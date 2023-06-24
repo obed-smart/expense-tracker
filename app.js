@@ -86,6 +86,7 @@ let createTd = () => {
         }
     })
 }
+// this code is for dark theme and its functions
 const darkMood = document.getElementById("darkmood");
 const container = document.getElementById("container");
 
