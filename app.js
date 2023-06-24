@@ -7,7 +7,6 @@ const trackerButton = document.getElementById("track-btn");
 const myTable = document.getElementById("tacker-table");
 const tablebody = myTable.getElementsByTagName("tbody")[0];
 
-
 trackerButton.addEventListener("click", () => {
 
     const datevalue = inputdate.value;
@@ -71,7 +70,6 @@ let createTd = () => {
     action.append(deletebutton,edit);
     tableCell5.appendChild(action);
 
-
     tableCell5.addEventListener("click", (e) => {
         if (e.target.tagName === "BUTTON") {
             e.target.parentElement.parentElement.parentElement.remove();
@@ -88,3 +86,21 @@ let createTd = () => {
         }
     })
 }
+const darkMood = document.getElementById("darkmood");
+const container = document.getElementById("container");
+
+darkMood.addEventListener("click",(e)=>{
+if(e.target.innerHTML === "Dark mood"){
+    container.style.background = "#121212";
+    darkMood.innerHTML = "light mood";
+    inputDiv.style.background = "transparent";
+    trackerButton.style.border = "1px solid rgb(236, 234, 232)";
+    trackerButton.style.background = "transparent";
+} else if(e.target.innerHTML === "light mood"){
+    container.style.background = "linear-gradient(132deg, rgb(141, 133, 139), #7b8385)";
+     darkMood.innerHTML = "Dark mood";
+    inputDiv.style.background = "rgb(159, 154, 144)";
+    trackerButton.style.background = "blueviolet";
+    trackerButton.style.border = "none";
+}
+})
