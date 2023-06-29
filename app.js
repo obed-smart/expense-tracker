@@ -7,6 +7,7 @@ const trackerButton = document.getElementById("track-btn");
 const myTable = document.getElementById("tacker-table");
 const tablebody = myTable.getElementsByTagName("tbody")[0];
 
+
 trackerButton.addEventListener("click", () => {
 
     const datevalue = inputdate.value;
@@ -29,7 +30,7 @@ trackerButton.addEventListener("click", () => {
 //         let hideAction = document.getElementById("hide-action");
 //         hideAction.style.display = "block";
 //         inputDiv.style.display = "block";
-       
+
 //     }
 // })
 
@@ -48,17 +49,17 @@ let createTd = () => {
     tableCell3.innerHTML = inputnumber.value;
     tableCell4.innerHTML = inputdescrip.value;
 
-// TO FORMAT THE CURRENCY TO BE ABLE TO SHOW SIGNS AND CURMER
- let currencyFormater = new Intl.NumberFormat('en-NG',{
-    style:'currency',
-    currency: 'NGN',
- })
- tableCell3.innerHTML = currencyFormater.format(inputnumber.value);
+    // TO FORMAT THE CURRENCY TO BE ABLE TO SHOW SIGNS AND CURMER
+    let currencyFormater = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN',
+    })
+    tableCell3.innerHTML = currencyFormater.format(inputnumber.value);
 
-    inputdate.value = ""; 
-    inputselect.value = ""; 
-    inputnumber.value = ""; 
-    inputdescrip.value = ""; 
+    inputdate.value = "";
+    inputselect.value = "";
+    inputnumber.value = "";
+    inputdescrip.value = "";
 
     let action = document.createElement("div");
     action.className = "actionbtn";
@@ -67,7 +68,7 @@ let createTd = () => {
     deletebutton.className = "btn"
     let edit = document.createElement("span");
     edit.innerText = "🖋 "
-    action.append(deletebutton,edit);
+    action.append(deletebutton, edit);
     tableCell5.appendChild(action);
 
     tableCell5.addEventListener("click", (e) => {
@@ -78,7 +79,7 @@ let createTd = () => {
             tableCell2.contentEditable = "true"
             tableCell3.contentEditable = "true"
             tableCell4.contentEditable = "true"
-        }else {
+        } else {
             tableCell1.contentEditable = "false";
             tableCell2.contentEditable = "false";
             tableCell3.contentEditable = "false";
@@ -90,18 +91,23 @@ let createTd = () => {
 const darkMood = document.getElementById("darkmood");
 const container = document.getElementById("container");
 
-darkMood.addEventListener("click",(e)=>{
-if(e.target.innerHTML === "Dark mood"){
-    container.style.background = "#121212";
-    darkMood.innerHTML = "light mood";
-    inputDiv.style.background = "transparent";
-    trackerButton.style.border = "1px solid rgb(236, 234, 232)";
-    trackerButton.style.background = "transparent";
-} else if(e.target.innerHTML === "light mood"){
-    container.style.background = "linear-gradient(132deg, rgb(141, 133, 139), #7b8385)";
-     darkMood.innerHTML = "Dark mood";
-    inputDiv.style.background = "rgb(159, 154, 144)";
-    trackerButton.style.background = "blueviolet";
-    trackerButton.style.border = "none";
-}
+darkMood.addEventListener("click", (e) => {
+    if (e.target.innerHTML === "Dark mood") {
+        container.style.background = "#121212";
+        darkMood.innerHTML = "light mood";
+        inputDiv.style.background = "transparent";
+        trackerButton.style.background = "#BB86fc";
+        trackerButton.style.color = "#000";
+        trackerButton.style.fontWeight = 600;
+        trackerButton.style.fontSize = "14px";
+    } else if (e.target.innerHTML === "light mood") {
+        container.style.background = "linear-gradient(132deg, rgb(141, 133, 139), #7b8385)";
+        darkMood.innerHTML = "Dark mood";
+        inputDiv.style.background = "transparent";
+        trackerButton.style.background = "blueviolet";
+        trackerButton.style.border = "none";
+        trackerButton.style.fontSize = "14px";
+        trackerButton.style.color = "#fff";
+
+    }
 })

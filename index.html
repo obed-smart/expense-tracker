@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<div class="container" id="container" >
-  <button id="darkmood" class="darkmood">Dark mood</button>
+  <div class="container" id="container">
+    <button id="darkmood" class="darkmood"><i class="">Dark mood</i></button>
     <div class="track-main" id="track-main">
-    <h1>EXPENSE TRACKER</h1>
-    <div class="track-iput">
-        <input type="date" class="track-input-1" id="input-date"  >
-        <select name="Expense"  id="input-select">
+      <h1>EXPENSE TRACKER</h1>
+      <div class="track-iput">
+        <input type="date" class="track-input-1" id="input-date">
+        <select name="Expense" id="input-select">
           <option disabled selected value="">Expense Type</option>
-            <option value="feed" >Feed</option>
-            <option value="food">Food</option>
-            <option value="cloth">Cloth</option>
-            <option value="fuel">Fuel</option>
-            <option value="gas">Gas</option>
-            <option value="Poultry medication">Poultry medication</option>
+          <option value="feed">Feed</option>
+          <option value="food">Food</option>
+          <option value="cloth">Cloth</option>
+          <option value="fuel">Fuel</option>
+          <option value="gas">Gas</option>
+          <option value="Poultry medication">Poultry medication</option>
         </select>
-        <input type="number" min="1" class="track-input-3" id="input-number" placeholder="Amount" >
-        <input type="text" placeholder="description" class="track-input-4" id="input-descrip" >
+        <input type="number" min="1" class="track-input-3" id="input-number" placeholder="Amount">
+        <input type="text" placeholder="description" class="track-input-4" id="input-descrip">
+      </div>
+      <button class="track-btn" id="track-btn">ADD</button>
     </div>
-  <button class="track-btn" id="track-btn">Add expense</button>
-  </div>
-  <div class="table-container" id="table-container">
-      <table  class="tacker-table" id="tacker-table">
-        <thead>
-        <tr>
-          <th>Date</th>
-          <th>Expense Type</th>
-          <th>Amount</th>
-          <th>Description</th>
-          <th id="hide-action">Action</th>
-        </tr> 
-      </thead>
-      <tbody class="tablebody">
-        
-      </tbody>
+    <div class="table-container" id="table-container">
+      <table class="tacker-table" id="tacker-table">
+        <thead id="thead">
+          <tr>
+            <th>Date</th>
+            <th>Expense Type</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th id="hide-action">Action</th>
+          </tr>
+        </thead>
+        <tbody class="tablebody">
+        </tbody>
       </table>
     </div>
   </div>

@@ -18,7 +18,7 @@
 
 /* FOR THE MOTHER CONTAINER OF THE INPUTS AREA AND THE ADD BUTTON  */
 .track-main {
-    background-color: rgb(159, 154, 144);
+    background-color: transparent;
     width: 90%;
     height: 46vh;
     margin: auto;
@@ -27,6 +27,7 @@
     margin-top: 20px;
     position: relative;
     user-select: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
 }
 /* FOR THE HEADER OF THE PROJECT */
@@ -76,11 +77,13 @@ select {
     box-sizing: border-box;
     padding: 0;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
 }
 /* THIS IS THE MOTHER CONTAINER OF THE TABLE  */
 .table-container {
     width: 95%;
-    height: 45vh;
+    height: 43vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -88,29 +91,37 @@ select {
     margin: auto;
     position: relative;
     top: 3%;
+    /* border: 3px solid; */
 }
 /* THIS THE table */
 table {
     width: inherit;
+    border-collapse: collapse;
 }
-/* FOR THE TABLE ROW  */
-tr {
-    margin-bottom: 5px;
-}
-/* FOR THE TABLE HEAD */
+ /* FOR THE TABLE HEAD */ 
 th {
     position: sticky;
     background: #701ebd;
     text-align: center;
     height: 50px;
-    border-radius:10px;
-    border: none;
     top: 0;
     color: rgb(239, 237, 237);
 }
-.color{
-border: 3px solid navy;
+/* THIS IS FOR THE TABLE DATA */
+td {
+    background-color: transparent;
+    text-align: center;
+    color: rgb(252, 249, 249);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5PX;
+    margin: 5PX;
+    max-width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+/* td:nth-child(even){
+    background-color:#5b4d4d ;
+} */
 /* THIS IS FOR THE DELETE BUTTON  */
 .actionbtn button{
     cursor: pointer;
@@ -136,26 +147,9 @@ border: 3px solid navy;
     margin: auto;
     justify-content: space-between;
 }
-/* THIS IS FOR THE TABLE DATA */
-td {
-    background-color: rgb(159, 154, 144);
-    text-align: center;
-    color: rgb(252, 249, 249);
-    border-radius: 10px;
-    border: 1px solid #5d5656;
-    cursor: pointer;
-    font-family:sans-sarif,open-sans;
-    font-size: 20px;
-    padding: 5PX;
-    margin: 5PX;
-    max-width: 40px;
-    overflow: auto;
-}
-td:nth-child(even){
-    background-color:#727070 ;
-}
+
 .darkmood{
-    margin-top: 30px;
+    margin-top: 10px;
     position: relative;
     margin-left: 93%;
     cursor: pointer;
